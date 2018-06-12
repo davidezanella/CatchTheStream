@@ -5,3 +5,4 @@ Simple program which is able to extract the video stream from online streaming s
 Suported Sites:
 - NowVideo
 - SpeedVideo
+- Wstream

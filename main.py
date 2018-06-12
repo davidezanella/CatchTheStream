@@ -4,6 +4,8 @@ import platform
 
 from nowvideo import nowVideo
 from speedvideo import speedVideo
+from wstream import wStream
+
 from openload import openload
 
 if platform.system() == "Windows":
@@ -22,6 +24,8 @@ if "nowvideo" in url:
     site = nowVideo()
 elif "speedvideo" in url:
     site = speedVideo()
+elif "wstream" in url:
+    site = wStream()
 elif "oload" in url:
     site = openload()
 
