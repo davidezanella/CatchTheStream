@@ -4,6 +4,7 @@ import platform
 
 from nowvideo import nowVideo
 from speedvideo import speedVideo
+from openload import openload
 
 if platform.system() == "Windows":
     vlc_dir = r"C:\Program Files (x86)\VideoLAN\VLC"
@@ -21,6 +22,8 @@ if "nowvideo" in url:
     site = nowVideo()
 elif "speedvideo" in url:
     site = speedVideo()
+elif "oload" in url:
+    site = openload()
 
 else:
     print("Link type not recognised or not supported!!")
