@@ -45,4 +45,4 @@ print("Treating it as a ", site.siteName, " link...")
 #stream = site.getStreamUrl("https://speedvideo.net/embed-5cn7a578qmgz.html")
 
 stream = site.getStreamUrl(url)
-subprocess.Popen([vlc_cmd, stream])
+subprocess.Popen([vlc_cmd, stream, "--quiet"])
