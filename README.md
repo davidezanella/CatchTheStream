@@ -6,3 +6,4 @@ Suported Sites:
 - NowVideo
 - SpeedVideo
 - Wstream
+- Turbovid
