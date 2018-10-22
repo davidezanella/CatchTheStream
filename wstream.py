@@ -11,9 +11,9 @@ class wStream(streamSite):
             print("Error getting url")
             return
 
-        codeUrl = self.returnFirstReGroup("\|http\|poster\|metadata\|preload\|.*\|(.*)\|sources\|Player\|new'\.split\('\|'\)\)\)", r.text)
+        codeUrl = self.returnFirstReGroup("\|http\|poster\|none\|preload\|.*\|(.*)\|sources\|Player\|new'\.split\('\|'\)\)\)", r.text)
 
-        streamUrl = "https://blue.wstream.video/" + codeUrl + "/v.mp4"
+        streamUrl = "https://wwhite.fastcdn.stream/" + codeUrl + "/v.mp4"
 
         return streamUrl
 
