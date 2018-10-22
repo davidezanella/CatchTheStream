@@ -12,8 +12,9 @@ class wStream(streamSite):
             return
 
         codeUrl = self.returnFirstReGroup("\|http\|poster\|none\|preload\|.*\|(.*)\|sources\|Player\|new'\.split\('\|'\)\)\)", r.text)
+        baseUrl = self.returnFirstReGroup("stream\|\|fastcdn\|(.*)\|data", r.text)
 
-        streamUrl = "https://wwhite.fastcdn.stream/" + codeUrl + "/v.mp4"
+        streamUrl = "https://" + baseUrl + ".fastcdn.stream/" + codeUrl + "/v.mp4"
 
         return streamUrl
 
