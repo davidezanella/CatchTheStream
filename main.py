@@ -6,6 +6,7 @@ from nowvideo import nowVideo
 from speedvideo import speedVideo
 from wstream import wStream
 from turbovid import turboVid
+from vidtome import vidtome
 
 from openload import openload
 
@@ -29,6 +30,8 @@ elif "wstream" in url:
     site = wStream()
 elif "turbovid" in url:
     site = turboVid()
+elif "vidtome" in url:
+    site = vidtome()
 elif "oload" in url:
     site = openload()
 

@@ -11,6 +11,7 @@ python3 main.py
 - SpeedVideo
 - Wstream
 - Turbovid
+- VidTo
 
 ## Required libraries:
 - VLC program installed
