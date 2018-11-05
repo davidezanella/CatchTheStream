@@ -1,6 +1,7 @@
 import subprocess
 import os
 import platform
+import sys
 
 from nowvideo import nowVideo
 from speedvideo import speedVideo
@@ -20,8 +21,10 @@ if platform.system() == "Windows":
 else: #maybe linux
     vlc_cmd = "vlc"
 
-
-url = input('Paste the link of the video that you want to see:\n')
+if len(sys.argv) == 1:
+    url = input('Paste the link of the video that you want to see:\n')
+else:
+    url = sys.argv[1]
 
 if "nowvideo" in url:
     site = nowVideo()

@@ -3,7 +3,7 @@ Simple program which is able to extract the video stream from online streaming s
 
 ## How to use:
 ``` 
-python3 main.py 
+python3 main.py video_url
 ```
 
 ## Suported Sites:
