@@ -12,6 +12,7 @@ python3 main.py
 - Wstream
 - Turbovid
 - VidTo
+- DeltaBit
 
 ## Required libraries:
 - VLC program installed

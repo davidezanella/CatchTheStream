@@ -7,6 +7,7 @@ from speedvideo import speedVideo
 from wstream import wStream
 from turbovid import turboVid
 from vidtome import vidtome
+from deltabit import deltabit
 
 from openload import openload
 
@@ -32,6 +33,8 @@ elif "turbovid" in url:
     site = turboVid()
 elif "vidtome" in url:
     site = vidtome()
+elif "deltabit" in url:
+    site = deltabit()
 elif "oload" in url:
     site = openload()
 
