@@ -6,13 +6,13 @@ Simple program which is able to extract the video stream from online streaming s
 python3 main.py video_url
 ```
 
-## Suported Sites:
-- NowVideo
+## Suported Streaming Sites:
+- DeltaBit ![DeltaBit](https://deltabit.co/images/favicon/favicon-16x16.png)
+- NowVideo ![NowVideo](http://nowvideo.pw/images/favicon.ico)
 - SpeedVideo
-- Wstream
-- Turbovid
-- VidTo
-- DeltaBit
+- Turbovid ![Turbovid](http://turbovid.me/favicon.ico)
+- VidTo ![VidTo](http://vidtome.co/images/favicon.ico)
+- Wstream ![Wstream](https://wstream.video/favicon.ico)
 
 ## Required libraries:
 - VLC program installed
