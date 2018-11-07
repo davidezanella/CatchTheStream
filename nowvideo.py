@@ -26,20 +26,19 @@ class nowVideo(streamSite):
             }
         )
 
-
         js_code = self.returnFirstReGroup("\d,'(.*)'\.", r.text)
         elems = js_code.split('|')
 
         eval_fn = self.returnFirstReGroup("<script>eval(.*)\n<\/script>", r.text)
 
-        url1_n = self.returnFirstReGroup("\/\/(\d+)-", eval_fn)
-        url2 = self.returnFirstReGroup("-(\d+)\.", eval_fn)
+        url1_n = self.returnFirstReGroup("\/\/(\d+)", eval_fn)
+        url2 = self.returnFirstReGroup("(\d+)\.", eval_fn)
         site_n = self.returnFirstReGroup("\.(\d+)\.", eval_fn)
         domain_n = self.returnFirstReGroup("\.(\d+)\:", eval_fn)
         port_n = self.returnFirstReGroup("\:(\d+)\/", eval_fn)
         suburl1_n = self.returnFirstReGroup("\:\d+\/(\d+)\/", eval_fn)
         suburl2_n = self.returnFirstReGroup("\:\d+\/\d+\/(\d+)\/", eval_fn)
-        file_n = 16
+        file_n = ord(self.returnFirstReGroup("\/([a-z])\.", eval_fn)) - 96 + 9
 
         port = elems[int(port_n)]
         suburl1 = elems[int(suburl1_n)]
@@ -52,8 +51,12 @@ class nowVideo(streamSite):
 
         if(url1 == ""):
             url1 = url1_n  
+        
+        first_part = url1 + "-" + url2
+        if url1_n + "-" + url2 not in eval_fn:
+            first_part = url1
 
-        streamUrl = "http://" + url1 + "-" + url2 + "." + site + "." + domain + ":" + port + "/" + suburl1 + "/" + suburl2 + "/" + file_name + ".mp4"
+        streamUrl = "http://" + first_part + "." + site + "." + domain + ":" + port + "/" + suburl1 + "/" + suburl2 + "/" + file_name + ".mp4"
 
         return streamUrl
 
