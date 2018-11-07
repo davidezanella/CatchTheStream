@@ -31,9 +31,7 @@ class turboVid(streamSite):
             }
         )
         
-        codeUrl = self.returnFirstReGroup("\|mp4\|(.*)\|sources\|Player\|new'\.split\('\|'\)\)\)", r.text)
-
-        streamUrl = "http://93.190.141.191/" + codeUrl + "/v.mp4"
+        streamUrl = self.returnFirstReGroup('sources: \["(.*)"\],', r.text)
 
         return streamUrl
 
